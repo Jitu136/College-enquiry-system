@@ -1,0 +1,72 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "CS_placement"
+				"text": "CS_placement"
+				"background": new java.awt.Color( 0, 102, 0, 255 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 156
+				"y": 35
+				"width": 170
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "CS_FEESSTRUCTURE"
+				"text": "CS_FEESSTRUCTURE"
+				"background": new java.awt.Color( 51, 153, 0, 255 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 150
+				"y": 105
+				"width": 180
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "CS_CUTOFF_CAP1"
+				"text": "CS_CUTOFF_CAP1"
+				"background": new java.awt.Color( 0, 255, 0, 255 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 155
+				"y": 170
+				"width": 180
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "CS_CUTOFF_CAP2"
+				"text": "CS_CUTOFF_CAP2"
+				"background": new java.awt.Color( 102, 255, 0, 255 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 160
+				"y": 230
+				"width": 170
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "CS_CUTOFF_CAP3"
+				"text": "CS_CUTOFF_CAP3"
+				"background": new java.awt.Color( 153, 255, 153, 255 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 160
+				"y": 295
+				"width": 170
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"icon": new com.jformdesigner.model.SwingIcon( 1, "C:\\Users\\Aniket\\Pictures\\Screenshots\\Screenshot 2023-11-06 181425.png" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 475
+				"height": 455
+				"x": 0
+				"y": -30
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 475, 455 )
+		} )
+	}
+}

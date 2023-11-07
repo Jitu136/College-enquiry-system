@@ -1,0 +1,36 @@
+public List<String> getFeesData() {
+        List<String> feesData = new ArrayList<>();
+        Connection connection = DbConnection.getConnection();
+
+        if (connection != null) {
+            String query = "SELECT * FROM cs_fees_structure";
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+                 ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("cs_fees_structure_id");
+                    String category = resultSet.getString("category");
+                    int tutionFees = resultSet.getInt("tution_fees");
+                    int developmentFees = resultSet.getInt("development_fees");
+                    int eligibilityFees = resultSet.getInt("eligibility_fees");
+                    int examFees = resultSet.getInt("exam_fees");
+                    int miscUnivFees = resultSet.getInt("misc_univ_fees");
+                    int totalRs = resultSet.getInt("total_rs");
+
+                    String entry = String.format("ID: %d, Category: %s, Tution Fees: %d, Development Fees: %d, " +
+                            "Eligibility Fees: %d, Exam Fees: %d, Misc Univ Fees: %d, Total Rs: %d",
+                            id, category, tutionFees, developmentFees, eligibilityFees, examFees, miscUnivFees, totalRs);
+
+                    feesData.add(entry);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                // Handle the exception here, e.g., show an error message to the user
+            } finally {
+                DbConnection.closeConnection();
+            }
+        }
+
+        return feesData;
+    }
+
